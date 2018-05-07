@@ -1,2 +1,0 @@
-# GameCaro
-Game caro Java
