@@ -77,6 +77,12 @@ public class Process {
 		
 		return 0;
 	}
+	
+	protected void undoMatrix(Point point) {
+		int row = point.x + 1;
+		int col = point.y + 1;
+		matrix[row][col] = 0;
+	}
 
 	public int[][] getMatrix() {
 		return matrix;

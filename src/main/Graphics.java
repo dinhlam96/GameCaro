@@ -95,7 +95,7 @@ public class Graphics extends JPanel{
 		this.winner = winner;
 	}
 	
-	public void actionClick(Point point){
+	void actionClick(Point point){
 		Point pointTemp = convertPoint(point);
 		if(process.updateMatrix(player, convertPointToMaxtrix(pointTemp))){
 			pointVector.addElement(point);
@@ -112,7 +112,7 @@ public class Graphics extends JPanel{
 		player =! player;
 		Point point = pointVector.get(pointVector.size() - 1);
 		point = convertPointToMaxtrix(convertPoint(point));
-//		process.undoMatrix();
+		process.undoMatrix(point);
 		repaint();
 	}
 	public boolean canUndo(){
